@@ -1,11 +1,6 @@
 @import "tailwindcss";
 
-:root {
-  --background: #f9fafb;
-  --foreground: #111827;
-}
-
-body {
-  background-color: var(--background);
-  color: var(--foreground);
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
 }
