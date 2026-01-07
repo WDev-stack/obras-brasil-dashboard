@@ -4,13 +4,11 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
 
-// Note o "@/" - ele é o seu atalho direto para a pasta "src"
 import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
 
-// Validação com Zod (Igual às regras de negócio em Kotlin)
 const authSchema = z.object({
   email: z.string().email("Por favor, insira um e-mail válido"),
   password: z.string().min(6, "A senha deve ter no mínimo 6 caracteres"),
